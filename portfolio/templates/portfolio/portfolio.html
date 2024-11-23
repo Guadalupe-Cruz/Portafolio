@@ -1,0 +1,88 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Portafolio{% endblock %}
+
+{% block background %}
+    {% load static %}
+    <style>
+        body {
+            background-image: url('{% static "core/img/portafolio.jpg" %}');
+            background-size: cover;
+            background-position: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #f8f9fa;
+        }
+
+        h1, .subheading {
+            animation: fadeInDown 1.5s ease-in-out;
+        }
+
+        .project img {
+            animation: zoomIn 1.5s ease-in-out;
+        }
+
+        .btn-primary {
+            background-color: #17a2b8;
+            border-color: #17a2b8;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px #17a2b8;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+{% endblock %}
+
+{% block headers %}
+    <header class="text-center my-5">
+        <h1 class="display-4">Portafolio</h1>
+        <p class="lead subheading">Currículo</p>
+    </header>
+{% endblock %}
+
+{% block content %}
+    <section class="container py-5">
+        <!-- Proyecto: Infraestructura como Servicio -->
+        <div class="row project mb-5 align-items-center">
+            <!-- Imagen del proyecto -->
+            <div class="col-lg-5 col-md-6 text-center">
+                <img class="img-fluid rounded shadow"  src="{% static 'core/img/iac.png' %}" alt="IAC Project">
+            </div>
+            <!-- Detalles del proyecto -->
+            <div class="col-lg-6 col-md-6">
+                <h2 class="section-heading title">IAC Virtual Assistant</h2>
+                <p>IAC Voice es una aplicación móvil desarrollada en React Native que funciona como un asistente de voz inteligente.</p>
+                <a href="https://main.d2oiee202v4h3m.amplifyapp.com/" class="btn btn-primary btn-lg">
+                    Más Información
+                </a>
+            </div>
+        </div>
+
+        <hr class="my-4">
+
+        <!-- Aquí podrías añadir más proyectos o contenido adicional -->
+    </section>
+{% endblock %}

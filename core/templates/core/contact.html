@@ -1,0 +1,92 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Contacto{% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/contacto.png' %}{% endblock %}
+
+{% block headers %}
+<div class="header-container">
+    <h1 class="header-title">Contacto</h1>
+    <span class="subheading">Asesoría</span>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="content-wrapper">
+    <div class="contact-info">
+        <p>Como desarrolladora apasionada por la innovación, mi enfoque va más allá de la creación de soluciones tecnológicas. Me especializo en el diseño y desarrollo de aplicaciones web y móviles, ofreciendo servicios de alta calidad en la creación de interfaces de usuario intuitivas y eficientes. Mi objetivo es proporcionar una experiencia de usuario excepcional a través de la integración de tecnologías modernas y un diseño funcional.</p> 
+        <p>Mi carrera está orientada a entregar soluciones escalables, seguras y confiables, con un fuerte enfoque en el desarrollo ágil y la mejora continua. Trabajo para transformar ideas en productos digitales que no solo satisfacen las necesidades de los clientes, sino que también superan sus expectativas.</p>
+    </div>
+    <div class="contact-details">
+        <div class="detail-item">
+            <p><b>Teléfono:</b> +52 5512409241</p>
+        </div>
+        <div class="detail-item">
+            <p><b>Correo:</b> al222110828@gmail.com</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+<style>
+    .header-container {
+        text-align: center;
+        animation: fadeInDown 1s;
+    }
+
+    .header-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+
+    .subheading {
+        font-size: 1.2rem;
+        color: #666;
+    }
+
+    .content-wrapper {
+        margin: 20px auto;
+        padding: 20px;
+        max-width: 800px;
+        animation: fadeInUp 1s;
+    }
+
+    .contact-info {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .contact-details {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .detail-item {
+        font-size: 1.1rem;
+    }
+
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
